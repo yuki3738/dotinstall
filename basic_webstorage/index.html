@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Web Storage</title>
+</head>
+<body>
+    <script>
+    (function() {
+
+        if (typeof(Storage) === "undefined") {
+            alert("Web Storage Not Supported");
+        } else {
+            console.log("Supported!");
+        }
+
+    })();
+    </script>
+</body>
+</html>
