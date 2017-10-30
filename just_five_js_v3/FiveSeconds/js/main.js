@@ -11,5 +11,8 @@
   });
 
   stop.addEventListener('click', function() {
+    var elapsedTime;
+    elapsedTime = (Date.now() - startTime) / 1000;
+    result.textContent = elapsedTime.toFixed(3);
   });
 })();
