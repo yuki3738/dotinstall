@@ -26,11 +26,11 @@
         };
         var chart = new google.visualization.LineChart(target);
         data = new google.visualization.arrayToDataTable([
-          ['Year', '@taguchi', '@fkoji'],
-          ['2014', 52, 89],
-          ['2015', 38, 78],
-          ['2016', 44, 88],
-          ['2017', 62, 91]
+          ['Year', '@taguchi', {role: 'annotation'}, {role: 'certainty'}, '@fkoji', {role: 'certainty'}],
+          ['2014', 52, 'Campaign A', true, 89, true],
+          ['2015', 38, null, true, 78, true],
+          ['2016', 44, null, true, 88, true],
+          ['2017', 62, null, false, 91, false]
         ]);
         chart.draw(data, options);
       }
