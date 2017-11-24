@@ -18,24 +18,21 @@
           title: 'My Chart',
           width: 500,
           height: 300,
-          backgroundColor: '#f8f8f8',
-          colors: ['#aaa', '#bbb', '#ccc'],
-          slices: [1, {offset: 0.2}],
-          // pieHole: 0.4,
-          is3D: true
+          animation: {
+            startup: true,
+            duration: 800,
+            easing: 'inAndOut'
+          },
+          // isStacked: true
+          isStacked: 'percent'
         };
-        var chart = new google.visualization.PieChart(target);
-        // data = new google.visualization.DataTable();
-        // data.addColumn('string', 'Language');
-        // data.addColumn('number', 'Votes');
-        // data.addRow(['PHP', 30]);
-        // data.addRow(['Ruby', 20]);
-        // data.addRow(['Python', 10]);
+        // var chart = new google.visualization.BarChart(target);
+        var chart = new google.visualization.ColumnChart(target);
         data = new google.visualization.arrayToDataTable([
-          ['Language', 'Votes'],
-          ['PHP', 100],
-          ['Ruby', 20],
-          ['Python', 10]
+          ['Team', 'Item-1', 'Item-2'],
+          ['Team A', 12, 38],
+          ['Team B', 42, 18],
+          ['Team C', 11, 58]
         ]);
         chart.draw(data, options);
       }
@@ -43,6 +40,6 @@
       google.charts.load('current', {packages: ['corechart']});
       google.charts.setOnLoadCallback(drawChart);
     })();
-    </script>
+  </script>
 </body>
 </html>
