@@ -12,26 +12,20 @@
       'use strict';
 
       function drawChart() {
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1e8lczjO4RCCIQrEAoDGmylsRLGjZ4MB67IKrPm1oZFc/edit?usp=sharing');
+        query.send(handleQueryResponse);
+      }
+
+      function handleQueryResponse(response) {
         var target = document.getElementById('target');
         var data;
         var options = {
           title: 'My Chart',
           width: 500,
-          height: 300,
-          hAxis: {title: 'Year'},
-          vAxis: {title: 'Sales'},
-          curveType: 'function',
-          pointSize: 10,
-          pointShape: 'square'
+          height: 300
         };
-        var chart = new google.visualization.LineChart(target);
-        data = new google.visualization.arrayToDataTable([
-          ['Year', '@taguchi', {role: 'annotation'}, {role: 'certainty'}, '@fkoji', {role: 'certainty'}],
-          ['2014', 52, 'Campaign A', true, 89, true],
-          ['2015', 38, null, true, 78, true],
-          ['2016', 44, null, true, 88, true],
-          ['2017', 62, null, false, 91, false]
-        ]);
+        var chart = new google.visualization.PieChart(target);
+        data = response.getDataTable();
         chart.draw(data, options);
       }
 
