@@ -17,7 +17,12 @@
         var options = {
           title: 'My Chart',
           width: 500,
-          height: 300
+          height: 300,
+          backgroundColor: '#f8f8f8',
+          colors: ['#aaa', '#bbb', '#ccc'],
+          slices: [1, {offset: 0.2}],
+          // pieHole: 0.4,
+          is3D: true
         };
         var chart = new google.visualization.PieChart(target);
         // data = new google.visualization.DataTable();
