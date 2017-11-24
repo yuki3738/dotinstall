@@ -18,21 +18,19 @@
           title: 'My Chart',
           width: 500,
           height: 300,
-          animation: {
-            startup: true,
-            duration: 800,
-            easing: 'inAndOut'
-          },
-          // isStacked: true
-          isStacked: 'percent'
+          hAxis: {title: 'Year'},
+          vAxis: {title: 'Sales'},
+          curveType: 'function',
+          pointSize: 10,
+          pointShape: 'square'
         };
-        // var chart = new google.visualization.BarChart(target);
-        var chart = new google.visualization.ColumnChart(target);
+        var chart = new google.visualization.LineChart(target);
         data = new google.visualization.arrayToDataTable([
-          ['Team', 'Item-1', 'Item-2'],
-          ['Team A', 12, 38],
-          ['Team B', 42, 18],
-          ['Team C', 11, 58]
+          ['Year', '@taguchi', '@fkoji'],
+          ['2014', 52, 89],
+          ['2015', 38, 78],
+          ['2016', 44, 88],
+          ['2017', 62, 91]
         ]);
         chart.draw(data, options);
       }
