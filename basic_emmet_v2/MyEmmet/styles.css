@@ -27,3 +27,21 @@ color: rgb(0, 0, 0);
 color: rgba(0, 0, 0, .5);
 
 opacity: .3;
+
+position: absolute;
+
+position: relative;
+
+display: none;
+
+overflow: hidden;
+
+cursor: pointer;
+
+text-align: center;
+
+font-weight: bold;
+
+font-size: 16px;
+
+font: 16px !important;
