@@ -45,3 +45,9 @@ font-weight: bold;
 font-size: 16px;
 
 font: 16px !important;
+
+body {
+  background-image: url(https://dotinstall.com/img/premium_banner_v2.png);
+  width: 635px;
+  height: 80px;
+}
