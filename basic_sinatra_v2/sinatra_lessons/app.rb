@@ -5,6 +5,6 @@ get '/' do
   "hello world again"
 end
 
-get '/hello/:fname/?:lname?' do |f, l|
-  "hello #{f} #{l}"
+get %r{/users/([0-9]*)} do
+  "user id = #{params[:captures][0]}"
 end
