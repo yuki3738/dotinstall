@@ -2,9 +2,9 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 get '/' do
-  "hello world again"
+  erb :index
 end
 
-get %r{/users/([0-9]*)} do
-  "user id = #{params[:captures][0]}"
+get '/about' do
+  erb :about
 end
