@@ -11,16 +11,21 @@
 <body>
   <div id="root"></div>
   <script type="text/babel">
-  (() => {
+    (() => {
 
-    function showMessage() {
-      alert('Hello');
-    }
-    ReactDOM.render(
-      <div style={{width:100, height:100, backgroundColor:'tomato'}} onClick={showMessage}></div>,
-      document.getElementById('root')
-    );
-  })();
+      function Counter(props) {
+        return <div>0 {props.color}</div>;
+      }
+
+      ReactDOM.render(
+        <div>
+          <Counter color="tomato"/>
+          <Counter color="skyblue"/>
+          <Counter color="limegreen"/>
+        </div>,
+        document.getElementById('root')
+      );
+    })();
   </script>
 </body>
 </html>
