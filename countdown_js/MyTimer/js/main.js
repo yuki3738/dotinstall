@@ -11,6 +11,7 @@
   var timeLeft;
   var timeToCountDown = 0;
   var timerId;
+  var isRunning = false;
 
   function updateTimer(t) {
     var d = new Date(t);
@@ -27,6 +28,8 @@
     timerId = setTimeout(function() {
       timeLeft = timeToCountDown - (Date.now() - startTime);
       if (timeLeft < 0) {
+        isRunning = false;
+        start.textContent = 'Start';
         clearTimeout(timerId);
         timeLeft = 0;
         timeToCountDown = 0;
@@ -39,8 +42,17 @@
   }
 
   start.addEventListener('click', function() {
-    startTime = Date.now();
-    countDown();
+    if (isRunning === false) {
+      isRunning = true;
+      start.textContent = 'Stop';
+      startTime = Date.now();
+      countDown();
+    } else {
+      isRunning = false;
+      start.textContent = 'Start';
+      timeToCountDown = timeLeft;
+      clearTimeout(timerId);
+    }
   });
 
   min.addEventListener('click', function() {
