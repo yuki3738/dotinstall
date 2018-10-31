@@ -12,8 +12,16 @@
   <div id="root"></div>
   <script type="text/babel">
     (() => {
+
+      const name = 'taguchi';
       ReactDOM.render(
-        <p>Hello!</p>,
+        // <p>Hello! {name.toUpperCase()}</p>,
+        // <p>Hello</p><p>World</p>,
+        <div>
+          <p>Hello</p>
+          <hr/>
+          <p>World</p>
+        </div>,
         document.getElementById('root')
       );
     })();
