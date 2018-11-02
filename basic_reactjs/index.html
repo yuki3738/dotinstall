@@ -13,12 +13,16 @@
   <script type="text/babel">
     (() => {
 
-      function showMessage() {
-        alert('Hello');
+      function Counter(props) {
+        return <div>0 {props.color}</div>
       }
 
       ReactDOM.render(
-        <div className="box" onClick={showMessage}></div>,
+        <div>
+          <Counter color="tomato"/>
+          <Counter color="skyblue"/>
+          <Counter color="limegreen"/>
+        </div>,
         document.getElementById('root')
       );
     })();
