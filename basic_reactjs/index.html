@@ -37,14 +37,26 @@
         }
       }
 
-      ReactDOM.render(
+      class App extends React.Component {
+        constructor() {
+          super();
+        }
+        render() {
+          return (
         <div className="container">
           <ul>
             <Counter color="tomato"/>
             <Counter color="skyblue"/>
             <Counter color="limegreen"/>
           </ul>
-        </div>,
+              <div>TOTAL INVENTORY: 3</div>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        <App/>,
         document.getElementById('root')
       );
     })();
