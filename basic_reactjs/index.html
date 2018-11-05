@@ -18,12 +18,19 @@
           super(props);
           this.state = {
             count: 0
-            // message: 'hello!'
           };
+          this.countUp = this.countUp.bind(this);
+        }
+        countUp() {
+          this.setState(prevState => {
+            return {
+              count: prevState.count + 1
+            };
+          });
         }
         render() {
           return (
-            <li style={{backgroundColor:this.props.color}}>
+            <li style={{backgroundColor:this.props.color}} onClick={this.countUp}>
               {this.state.count}
             </li>
           );
