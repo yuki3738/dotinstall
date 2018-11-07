@@ -1,12 +1,10 @@
 (() => {
   'use strict';
 
-  const input = document.querySelector('input');
-  const button = document.querySelector('button');
-  const p = document.querySelector('p');
-
-  button.addEventListener('click', () => {
-    const d = moment(input.value);
-    p.textContent = d.isValid() ? d.format('LL') : '無効な日付です';
-  });
+  // const d = moment();
+  // const d = moment('2018-01-10');
+  // const d = moment('01-10-2018', 'MM-DD-YYYY');
+  // const d = moment(new Date(2018, 0, 10));
+  const d = moment([2018, 0, 10]);
+  console.log(d.format('LLLL'));
 })();
