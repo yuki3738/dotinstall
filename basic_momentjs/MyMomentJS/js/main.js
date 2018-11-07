@@ -6,6 +6,7 @@
   const p = document.querySelector('p');
 
   button.addEventListener('click', () => {
-    p.textContent = input.value;
+    const d = new Date(input.value);
+    p.textContent = `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
   });
 })();
