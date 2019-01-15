@@ -1,16 +1,21 @@
-# 文字列
-s = "he\nllo wor\tld"
-html = """<html>
-<body></body>
-</html>"""
-print(s)
-print(html)
+# + - * / // % **
 
-# 整数
-i = 10
+x = 10
+print(x / 3) # 3.33...
+print(x // 3) # 3
+print(x % 3) # 1
+print(x ** 2) # 100
 
-# 浮動小数点
-f = 23.4
+y = 4
+# y = y + 12
+y += 12
+print(y) # 16
 
-# 論理値
-flag = True # False
+# and or not
+print(True and False) # False
+print(True or False) # True
+print(not True) # False
+
+# + *
+print("hello " + "world")
+print("hello " * 3)
