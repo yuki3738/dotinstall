@@ -1,18 +1,27 @@
 'use strict';
 
-const score = 60;
-const name = 'taguchi';
+const signal = 'pink';
 
-// && なおかつ（AND）
-// || もしくは（OR）
-// ! 〜ではない（NOT）
-
-// if (score >= 50) {
-//   if (name === 'taguchi') {
-//     console.log('Good job!');
-//   }
+// if (signal === 'red') {
+//   console.log('stop!');
+// } else if (signal === 'yellow') {
+//   console.log('caution!');
+// } else if (signal === 'blue'){
+//   console.log('go!');
 // }
 
-if (score >= 50 && name === 'taguchi') {
-  console.log('Good job!');
+switch (signal) {
+  case 'red':
+    console.log('stop!');
+    break;
+  case 'yellow':
+    console.log('caution!');
+    break;
+  case 'blue':
+  case 'green':
+    console.log('go!');
+    break;
+  default:
+    console.log('wrong signal!');
+    break;
 }
