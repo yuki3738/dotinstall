@@ -12,11 +12,20 @@
 
   target.textContent = word;
 
+  function updateTarget() {
+    let placeholder = '';
+    for (let i = 0; i < loc; i++) {
+      placeholder += '_';
+    }
+    target.textContent = placeholder + word.substring(loc);
+  }
+
   window.addEventListener('keyup', e => {
     if (e.key === word[loc]) {
       loc++;
       score++;
       scoreLabel.textContent = score;
+      updateTarget();
     } else {
       miss++;
       missLabel.textContent = miss;
