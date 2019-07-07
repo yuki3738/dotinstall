@@ -29,6 +29,11 @@
     target.textContent = placeholder + word.substring(loc);
   }
 
+  function showResult() {
+    const accuracy = score + miss === 0 ? 0 : score / (score + miss) * 100;
+    alert(`${score} letters, ${miss} misses, ${accuracy.toFixed(2)}% accuracy!`);
+  }
+
   function updateTimer() {
     const timeLeft = startTime + timeLimit - Date.now();
     timerLabel.textContent = (timeLeft / 1000).toFixed(2);
@@ -43,7 +48,7 @@
       clearTimeout(timeoutId);
       timerLabel.textContent = '0.00';
       setTimeout(() => {
-        alert('Game Over');
+        showResult();
       }, 100);
     }
   }
