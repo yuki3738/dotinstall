@@ -50,6 +50,9 @@
       setTimeout(() => {
         showResult();
       }, 100);
+
+      timerLabel.textContent = '0.00';
+      target.textContent = 'click to replay';
     }
   }
 
@@ -58,6 +61,13 @@
       return;
     }
     isPlaying = true;
+
+    loc = 0;
+    score = 0;
+    miss = 0;
+    scoreLabel.textContent = score;
+    missLabel.textContent = miss;
+    word = words[Math.floor(Math.random() * words.length)];
 
     updateTarget();
     startTime = Date.now();
