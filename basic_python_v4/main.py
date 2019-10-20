@@ -1,5 +1,4 @@
-print("Your name? ", end="")
-name = input()
+print("Your number? ", end="")
+num = int(input())
 
-print("hello %s" %name)
-print("hello %s again!" %name)
+print(num + 3)
