@@ -1,4 +1,9 @@
-print("Your number? ", end="")
-num = int(input())
+answer = 6
 
-print(num + 3)
+print("Your guess? ", end="")
+guess = int(input())
+
+if answer == guess:
+    print("Bingo!")
+else:
+    print("Boo...")
