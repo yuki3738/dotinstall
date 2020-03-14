@@ -15,7 +15,7 @@
       this.stop.textContent = 'STOP';
       this.stop.classList.add('stop');
       this.stop.addEventListener('click', () => {
-        clearTimeout(this.timeoutId)
+        clearTimeout(this.timeoutId);
 
         panelsLeft--;
 
@@ -46,6 +46,14 @@
         this.spin();
       }, 50);
     }
+
+    isUnmatched(p1, p2) {
+      return this.img.src !== p1.img.src && this.img.src !== p2.img.src;
+    }
+
+    unmatch() {
+      this.img.classList.add('unmatched');
+    }
   }
 
   function checkResult() {
@@ -55,7 +63,7 @@
     if (panels[1].isUnmatched(panels[0], panels[2])) {
       panels[1].unmatch();
     }
-    if (panels[2].isUnmatched(panels[0], panels[2])) {
+    if (panels[2].isUnmatched(panels[0], panels[1])) {
       panels[2].unmatch();
     }
   }
