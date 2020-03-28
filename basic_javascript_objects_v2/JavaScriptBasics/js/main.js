@@ -1,16 +1,14 @@
 'use strict';
 
 {
-  let i = 0
+  // const name = 'minamiya';
+  const name = 3738;
 
-  function showTime() {
-    console.log(new Date());
-    const timeoutId = setTimeout(showTime, 1000);
-    i++;
-    if (i > 2) {
-      clearTimeout(timeoutId);
-    }
+  try {
+    console.log(name.toUpperCase());
+  } catch (e) {
+    console.log(e);
   }
 
-  showTime();
+  console.log('Finish!');
 }
