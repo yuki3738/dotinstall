@@ -1,7 +1,9 @@
 'use strict';
 
 {
-  const d = new Date();
+  const d = new Date(2020, 3);
+  d.setHours(10, 20, 30);
+  d.setDate(31);
+  d.setDate(d.getDate() + 3);
   console.log(d);
-  console.log(`${d.getMonth() + 1}月 ${d.getDate()}日`);
 }
