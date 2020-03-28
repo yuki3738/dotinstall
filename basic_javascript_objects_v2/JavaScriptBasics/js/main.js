@@ -1,14 +1,20 @@
 'use strict';
 
 {
-  // const name = 'minamiya';
-  const name = 3738;
+  const posts = [
+    {
+      text: 'javascriptの勉強中…',
+      likeCount: 0,
+    },
+    {
+      text: 'プログラミング楽しい！',
+      likeCount: 0,
+    },
+  ];
 
-  try {
-    console.log(name.toUpperCase());
-  } catch (e) {
-    console.log(e);
+  function show(post) {
+    console.log(`${post.text} - ${post.likeCount}いいね`);
   }
 
-  console.log('Finish!');
+  show(posts[0]);
 }
