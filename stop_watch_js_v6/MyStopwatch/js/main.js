@@ -40,30 +40,30 @@
     reset.classList.remove('inactive');
   }
 
-  setButtonStateInitial();
-
-  start.addEventListener('click', () => {
+  function containInactive() {
     if (start.classList.contains('inactive') === true) {
       return;
     }
+  }
+
+  setButtonStateInitial();
+
+  start.addEventListener('click', () => {
+    containInactive()
     setButtonStateRunning();
     startTime = Date.now();
     countUp();
   });
 
   stop.addEventListener('click', () => {
-    if (stop.classList.contains('inactive') === true) {
-      return;
-    }
+    containInactive()
     setButtonStateStopped();
     clearTimeout(timeoutId);
     elapsedTime += Date.now() - startTime;
   });
 
   reset.addEventListener('click', () => {
-    if (reset.classList.contains('inactive') === true) {
-      return;
-    }
+    containInactive()
     setButtonStateInitial();
     timer.textContent = '00:00.000';
     elapsedTime = 0;
