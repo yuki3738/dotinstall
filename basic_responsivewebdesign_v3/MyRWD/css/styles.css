@@ -1,6 +1,18 @@
 /* common */
 /* small screen */
+body {
+  margin: 0;
+}
 
+.image {
+  background: pink;
+  height: 100px;
+}
+
+.text {
+  background: silver;
+  height: 100px;
+}
 
 /* medium screen */
 @media (min-width: 600px) {
