@@ -1,11 +1,13 @@
-@media (min-width: 0px) and (max-width: 599px) {
+/* common */
+/* small screen */
+
+
+/* medium screen */
+@media (min-width: 600px) {
 
 }
 
-@media (min-width: 600px) and (max-width: 799px) {
-
-}
-
+/* large screen */
 @media (min-width: 800px) {
 
 }
