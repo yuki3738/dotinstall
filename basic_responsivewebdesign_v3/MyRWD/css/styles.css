@@ -16,7 +16,17 @@ body {
 
 /* medium screen */
 @media (min-width: 600px) {
+  section {
+    display: flex;
+  }
 
+  .image {
+    width: 200px;
+  }
+
+  .text {
+    flex: 1;
+  }
 }
 
 /* large screen */
