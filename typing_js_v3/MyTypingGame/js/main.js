@@ -44,6 +44,8 @@
       setTimeout(() => {
         showResult();
       }, 100);
+
+      target.textContent = 'click to replay';
     }
   }
 
@@ -51,11 +53,19 @@
     const accuracy = score + miss === 0 ? 0 : score / (score + miss) * 100;
     alert(`${score} letters, ${miss} misses, ${accuracy.toFixed(2)}% accuracy!`)
   }
+
   window.addEventListener('click', () => {
     if (isPlaying === true) {
       return;
     }
     isPlaying = true;
+
+    loc = 0;
+    score = 0;
+    miss = 0;
+    scoreLabel.textContent = score;
+    missLabel.textContent = miss;
+    word = words[Math.floor(Math.random() * words.length)];
 
     target.textContent = word;
     startTime = Date.now();
