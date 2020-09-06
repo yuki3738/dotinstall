@@ -24,9 +24,10 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
       $(function () {
-        // $("#main .item").css('color', 'red');
-        // $("p, .item").css('color', 'red');
-        $('.item + .item').css('color', 'red');
+        //$("#sub > li:eq(2)").css('color', 'red');
+        //$("#sub > li:gt(1)").css('color', 'red');
+        //$("#sub > li:odd").css('color', 'red');
+        $("#sub > li:contains('4')").css('color', 'red');
       });
     </script>
   </body>
