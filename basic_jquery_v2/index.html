@@ -12,17 +12,16 @@
   </head>
   <body>
     <p>jQueryの練習</p>
+    <a href="http://google.com" data-sitename="google">google</a>
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
       $(function () {
-        // セレクタ.メソッド
-        // .css 設定 取得
-        //$('p').css('color', 'red').css('background', 'blue');
-        //console.log($('p').css('color'));
-
-        // addClass removeClass
-        $('p').addClass('myStyle');
+        // attr
+        //console.log($('a').attr('href'));
+        //$('a').attr('href', 'http://google.co.jp');
+        // data
+        console.log($('a').data('sitename'));
       });
     </script>
   </body>
