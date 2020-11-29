@@ -22,6 +22,21 @@ console.clear();
     console.log(dates);
   }
 
+  function getCalendarTail() {
+    const dates = [];
+    const lastDay = new Date(year, month + 1, 0).getDay();
+
+    for (let i = 1; i < 7 - lastDay; i++) {
+      dates.push({
+        date: i,
+        isToday: false,
+        isDisabled: true,
+      });
+    }
+
+    console.log(dates);
+  }
+
   function getCalendarBody() {
     const dates = [];
     const lastDate = new Date(year, month + 1, 0).getDate();
@@ -39,4 +54,5 @@ console.clear();
 
   getCalendarBody();
   getCalendarHead();
+  getCalendarTail()
 }
